@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+.btn {
+    background-color: steelblue;
+    width: 150px;
+    height: 35px;
+    color: white;
+}
+.task_name {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 5px 0px;
+}
+.task_desc {
+    font-size: 14px;
+    margin: 5px 0px 10px;
+}
+.task {
+    border: 1px solid black;
+    width: 350px;
+    margin: 10px 0px;
+    padding: 10px;
+    background-color: lightgray;
+}
+.showTasks {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.tasks {
+    display: inline-block;
+    vertical-align: top;
+}
+.editTask {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 40px; 
+    width: 350px;
+}
+.edTask {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: lightgray;
+}
+p {
+    margin: 5px;
+}

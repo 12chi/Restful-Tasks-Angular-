@@ -1,0 +1,48 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+   Restful Task
+  </h1>
+</div>
+
+<!-- <div>
+  <button class='btn' (click)="getTasksFromService()">Retrieve all Tasks</button>
+</div>
+
+<div *ngIf="tasks.length !=0">
+  <ul>
+    <li *ngFor="let task of tasks">
+      <h2>{{ task.name }}  {{ task._id }} </h2>
+    </li>
+  </ul>
+</div> -->
+<div class='new'>
+  <h2>Create New Task</h2>
+  <form (submit)="createTask()">
+    <p>Name: <input type='text' name="newTask.name" [(ngModel)]="newTask.name"></p>
+    <p>Desc: <input type='text' name="newTask.desc" [(ngModel)]="newTask.desc"></p>
+    <input type='submit' class='btn' value='Create' />
+  </form>
+</div>
+<div class='tasks'>
+  <div *ngIf="tasks.length !=0" class='showTasks'>
+    <h2>Task List</h2>
+    <div *ngFor="let task of tasks" class='task'>
+      <div>
+        <p class='task_name'>{{ task.name }} </p>
+        <p class='task_desc'> {{ task.desc }}</p>
+      </div>
+        <button (click)="editTask($event)" name='id' value='{{ task._id }}' class='btn'>Edit</button>
+        <button (click)="deleteTask($event)" name='id' value='{{ task._id }}' class='btn'>Delete</button>
+    </div>
+  </div>
+
+  <div *ngIf="updating==true" class='editTask'>
+    <h2>Edit a Task</h2>
+    <form (submit)="updateTask()" class='edTask'>
+      <p> Name: <input type='text' name='reqTask.name' [(ngModel)]="reqTask.name"> </p>
+      <p> Description: <input type='text' name='reqTask.desc' [(ngModel)]="reqTask.desc"> </p>
+      <input type='submit' class='btn' value='Edit' />
+    </form>
+  </div>
+</div>
